@@ -107,6 +107,7 @@ function handleImg(myImg, observer) {
       console.log(myImgSingle.intersectionRatio);
     }
   });
+  observer.observe(myImg);
 }
 
 function loadImage(image) {
