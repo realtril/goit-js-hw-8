@@ -111,7 +111,6 @@ function handleImg(myImg, observer) {
 
 function loadImage(image) {
   image.src = image.dataset.preview;
-  console.log(image);
 }
 
 const observer = new IntersectionObserver(handleImg, options);
