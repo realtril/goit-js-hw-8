@@ -143,3 +143,10 @@ body {
   visibility: visible;
   pointer-events: initial;
 }
+
+.gallery__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 200ms ease-in-out;
+}

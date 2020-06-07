@@ -7,9 +7,9 @@ export const tempImgPic = (item) => {
   >
     <img
       class="gallery__image"
-      src="${item.preview}"
+      src=""
       data-source="${item.original}"
-      
+      data-preview ="${item.preview}"
       alt="${item.description}"
     />
   </a>

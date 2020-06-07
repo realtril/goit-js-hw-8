@@ -92,6 +92,30 @@ document.addEventListener("keyup", function (event) {
   }
 });
 
-// imgs.forEach(function (item, index) {
-//   console.log(imgs[index].dataset.index);
-// });
+const imagez = document.querySelectorAll(".gallery__image");
+
+const options = {
+  root: null,
+  rootMargin: "100px",
+  threshold: 0.3,
+};
+
+function handleImg(myImg, observer) {
+  myImg.forEach((myImgSingle) => {
+    if (myImgSingle.intersectionRatio > 0) {
+      loadImage(myImgSingle.target);
+      console.log(myImgSingle.intersectionRatio);
+    }
+  });
+}
+
+function loadImage(image) {
+  image.src = image.dataset.preview;
+  console.log(image);
+}
+
+const observer = new IntersectionObserver(handleImg, options);
+
+imagez.forEach((img) => {
+  observer.observe(img);
+});
